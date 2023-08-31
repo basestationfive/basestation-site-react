@@ -1,5 +1,14 @@
+import React, {Component} from 'react'
 import logo from './logo.svg';
 import './App.css';
+import PostList from './components/PostList';
+
+//class App extends Component {
+//  render () {
+//    return 
+//  }
+//}
+
 
 function App() {
   return (
@@ -9,6 +18,10 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <p>
+          <PostList/>
+        </p>
+
         <a
           className="App-link"
           href="https://reactjs.org"
