@@ -1,37 +1,50 @@
+body {
+background-color:dimgray;
+padding: 0px;
+margin: auto;
+margin-top: 30px;
+margin-bottom: 30px;
 
-p {
-  padding-left: 30px;
-  padding-right: 30px;
-  
- 
+
 }
-h1 {
-    padding-left: 30px;
-    padding-right: 30px;
-    
-  }
+
+.header {
+    width:95%;
+    margin: auto;
+    background-color:whitesmoke;
+}
 
 .pages {
+    width:95%;
+    background-color:whitesmoke;
+    margin: auto;
+    padding-left: 10px;
+    height:  100vh;
+   }
+   
+   .login {
+    margin: 20px;
+    max-width: 250px;
+   }
+   .explore-project {
+    margin: 20px;
+   }
 
-  background-color: white;
-  width: 90%;
-  margin: auto;
-  min-height: 500px;
-  display: block;
+   .post-list {
+    max-height : 300px;
+    overflow-y: auto;
+    overflow: scroll;
+   }
+
+.footer {
+    margin: auto;
+    width:95%;
+    text-align: center;
+    background-color:black;
+    color: white;
+
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.list-group {
+    width: 200px;
 }
-
-.image-header {
-  background-color: white;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-
-}
-
-

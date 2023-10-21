@@ -31,15 +31,14 @@ class PostList extends Component {
     render () {
         const {posts, errorMsg} = this.state
         return (
-            <div>
-                List of Stuff 
+            <ul class="list-group post-list">
                 {
                     posts.length ?
-                    posts.map(post => <div key={post.id}>{post.title}</div>):
+                    posts.map(post => <li class="list-group-item"key={post.id}>{post.title}</li>):
                     null
                 }
-               { errorMsg ? <div> {errorMsg} </div> : null }
-            </div>
+               { errorMsg ? <li class="list-group-item"> {errorMsg} </li> : null }
+            </ul>
         )
     }
 }

@@ -1,15 +1,11 @@
 import React from "react";
 import { Nav, NavLink, NavMenu }
-    from "./NavbarElements";
+    from "./Navbar.Styles";
  
 const Navbar = () => {
     return (
         <>
-            <div class="image-header">
-                 <h1>BaseStationFive</h1>
-                <img src="https://basestationfive.files.wordpress.com/2017/06/cropped-footprint-moon.jpg" width="100%" alt="BaseStationFive" class="center"/>
-            </div>
-              <Nav>   
+              <Nav class="navbar">   
                 <NavMenu>
                 <NavLink to="/" activeStyle>
                         Home
