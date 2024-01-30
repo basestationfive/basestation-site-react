@@ -14,8 +14,6 @@ import Explore from './pages/explore';
 import Login from './pages/login';
 import Header from './components/Header';
 
-
-
 function App() {
   return (
    <Router>
