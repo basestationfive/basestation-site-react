@@ -1,5 +1,6 @@
 import React from 'react';
 import PostList from '../components/PostList';
+import ActionButton from '../components/ActionButton';
 
 const Explore = () => {
 	return (
@@ -19,6 +20,11 @@ const Explore = () => {
 					</p>
 			</div>
             
+			<div>
+
+				<ActionButton/>
+
+			</div>
 		
 		</div>
 	);
