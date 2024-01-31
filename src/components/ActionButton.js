@@ -17,7 +17,7 @@ transition: ease background-color 250ms;
 `
 
 function clickMe() {
-    fetch('https://kkiqlj6efc.execute-api.us-east-1.amazonaws.com/Prod/items', {
+    fetch('https://rgmiwdihr4.execute-api.us-east-1.amazonaws.com/Staging', {
         //mode: 'no-cors',
         //headers: {
         //  'Access-Control-Allow-Origin':'*'
