@@ -1,3 +1,5 @@
+/*
+
 import React from 'react';
 import styled from 'styled-components';
 
@@ -15,6 +17,8 @@ transition: ease background-color 250ms;
 
 }
 `
+const List = () => {
+    const [data, setData] = useState([]);
 
 function clickMe() {
     fetch('https://rgmiwdihr4.execute-api.us-east-1.amazonaws.com/Staging', {
@@ -40,20 +44,64 @@ const ActionButton= () => {
 		
             
 			<div>
-
-				<Button onClick={clickMe}>
-					Action Button 
-				</Button>
+                <div>
+                    <Button onClick={clickMe}>
+                        Action Button 
+                    </Button>
+                </div>
 
                 <div>
-
-                    
+                    <ul>
+                    {data.map((item => (<li key={item.itemid}>{item.itemvalue}</li>))}
+                    </ul>
                 </div>
 
 			</div>
 		
 		
 	);
+};
+
+export default ActionButton;
+
+  
+
+*/
+
+// src/List.js
+import React, { useState, useEffect } from 'react';
+
+const ActionButton = () => {
+  const [data, setData] = useState([]);
+
+  const fetchData = async () => {
+    try {
+      // Replace 'YOUR_API_ENDPOINT' with the actual endpoint of your web service
+      const response = await fetch('https://rgmiwdihr4.execute-api.us-east-1.amazonaws.com/Staging');
+      const result = await response.json();
+      console.log('Data loaded successfully:', result);
+  
+      // Assuming the data is nested inside an object property (e.g., 'items')
+        const dataList = result.items || [];
+
+        setData(dataList);
+        console.log('Data loaded successfully:', dataList);
+    } catch (error) {
+        
+  console.error('Error fetching data:', error);
+}
+};
+  return (
+    <div>
+      <h1>List from Web Service</h1>
+      <button onClick={fetchData}>Load List</button>
+      <ul>
+        {!data ? "No data received" : data.map((item) => (
+          <li key={item.id}>{item.type}</li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default ActionButton;

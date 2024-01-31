@@ -9,20 +9,24 @@ const Explore = () => {
 			<div class="explore-project" >
 				<h2>Project 1 - Axios</h2>
 					<p>
-						This is a call using axios to get a list of posts...
+						This project is to make a call from the React code Axios to get a list of posts from https://jsonplaceholder.typicode.com/posts
 					</p>
 				<PostList/>
 			</div>
 			<div class="explore-project" >				
-				<h2>Project 2 - TBD</h2>
+				<h2>Project 2 - Call AWS Lambda</h2>
 					<p>
-						this is cool
+						This project is to call and AWS Lambda to get all items in a DynamoDB table.
 					</p>
+					<ActionButton/>
 			</div>
             
-			<div>
-
-				<ActionButton/>
+			<div class="explore-project" >
+			<h2>Project 3 - Call AWS Lambda</h2>
+					<p>
+						Coming Soon...
+					</p>
+				
 
 			</div>
 		
