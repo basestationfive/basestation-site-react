@@ -1,0 +1,2 @@
+docker build -t bs5-react-app . 
+docker run -p 3000:3000 bs5-react-app
