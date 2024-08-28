@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jeremyhaveardbasestationsitereact 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jeremyhaveardbasestationsitereact
+  template:
+    metadata:
+      labels:
+        app: jeremyhaveardbasestationsitereact 
+    spec:
+      containers:
+        - name: jeremyhaveardbasestationsitereact 
+          image: bs5kuberegdev.azurecr.io/jeremyhaveardbasestationsitereact
+          ports:
+          - containerPort: 3000
