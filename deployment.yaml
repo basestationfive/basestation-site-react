@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: basestation-site-react
+spec:
+  selector:
+    matchLabels:
+      app: basestation-site-react
+  template:
+    metadata:
+      labels:
+        app: basestation-site-react
+    spec:
+      containers:
+      - name: basestation-site-react
+        image: bs5kuberegdev.azurecr.io/bs5-react-app:v101
+        resources:
+         ## limits:
+         ##   memory: "128Mi"
+         ##   cpu: "500m"
+
+        ports:
+         - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: basestation-site-react
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 3000
+    targetPort: 3000
+  selector:
+    app: basestation-site-react      

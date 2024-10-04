@@ -1,2 +1,46 @@
+
+
+
+
+-------------------------------------------------------
+--local docker build--
+
 docker build -t bs5-react-app . 
 docker run -p 3000:3000 bs5-react-app
+
+
+--------------------------------------------------------
+--AKS Commands--
+--  Install cli
+
+az aks install-cli
+
+Set PATH
+--------------------------------------------------------
+Push image to ACR
+
+
+az acr login --name BS5KubeRegDev
+
+docker images
+
+docker tag bs5-react-app bs5kuberegdev.azurecr.io/bs5-react-app:v101
+
+docker push bs5kuberegdev.azurecr.io/bs5-react-app:v101
+
+
+--------------------------------------------------------
+--  Deploy to AKS,  deploys directly to pods
+
+az login
+
+####Sample###### az aks get-credentials --resource-group readit-app-rg --name cart-aks
+
+az aks get-credentials --resource-group BS5-Resource-Group-Dev --name BS5-Kube-Cluster-Dev-3
+
+kubectl get nodes
+
+kubectl delete -f deployment.yaml
+
+kubectl apply –f deployment.yaml -- need to type manually...must have non-visable chars in this line
+
